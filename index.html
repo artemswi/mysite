@@ -237,6 +237,7 @@
                     <div class="mb-3">
                         <label class="form-label">Оберіть сектор</label>
                         <select class="form-select" id="sectorSelect" required>
+                            <option value="" disabled selected>Оберіть сектор</option>
                             <option value="A1">Сектор A1 (200 грн)</option>
                             <option value="B2">Сектор B2 (350 грн)</option>
                             <option value="VIP">VIP Ложа (1200 грн)</option>
@@ -249,7 +250,7 @@
                     <button type="submit" class="btn btn-primary w-100">Підтвердити бронювання</button>
                 </form>
                 <hr>
-                <h6>Ваші бронювання (з "БД"):</h6>
+                <h3>Ваші бронювання (з "БД"):</h3>
                 <ul id="myBookingsList" class="list-group small"></ul>
             </div>
         </div>
@@ -258,16 +259,33 @@
 <div class="modal fade" id="newsModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
+
             <div class="modal-header-overlay">
-                <button type="button" class="btn-close custom-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button"
+                        class="btn-close custom-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
             </div>
+
             <div class="modal-body p-0">
-                <img src="" id="newsModalImg" class="w-100" alt="News Image" style="max-height: 450px; object-fit: cover; display: block;">
+
+                <img id="newsModalImg"
+                     class="w-100 d-none"
+                     alt="News Image"
+                     style="max-height: 450px; object-fit: cover; display: block;">
+
                 <div class="news-modal-article" style="padding: 40px; background: white;">
-                    <h2 id="newsModalTitle" class="fw-bold mb-4" style="color: #1a1932; font-size: 2rem;"></h2>
-                    <div id="newsModalText" style="font-size: 1.15rem; line-height: 1.8; color: #444; white-space: pre-line;">
+
+                    <h2 id="newsModalTitle"
+                        class="fw-bold mb-4 d-none"
+                        style="color: #1a1932; font-size: 2rem;"></h2>
+
+                    <div id="newsModalText"
+                         style="font-size: 1.15rem; line-height: 1.8; color: #444; white-space: pre-line;">
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>

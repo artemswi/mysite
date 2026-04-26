@@ -27,11 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const title = this.getAttribute('data-title');
             const text = this.getAttribute('data-text');
-            const img = this.getAttribute('data-img');
+            const imgSrc = this.getAttribute('data-img');
 
-            document.getElementById('newsModalTitle').innerText = title;
-            document.getElementById('newsModalText').innerText = text;
-            document.getElementById('newsModalImg').src = img;
+            const titleEl = document.getElementById('newsModalTitle');
+            const textEl = document.getElementById('newsModalText');
+            const imgEl = document.getElementById('newsModalImg');
+
+            titleEl.innerText = title;
+            textEl.innerText = text;
+            imgEl.src = imgSrc;
+
+            titleEl.classList.remove('d-none');
+            imgEl.classList.remove('d-none');
 
             newsModal.show();
         });
