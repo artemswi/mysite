@@ -1,0 +1,921 @@
+/* ============================================================
+   ФК КИЇВ — style.css
+   ============================================================ */
+
+/* ============================================================
+   BASE
+   ============================================================ */
+body {
+    background-color: #f4f4f4;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero-box {
+    background: url("img/stadium.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 700px;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.hero-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero-box h1,
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    font-size: 24px;
+    max-width: 1000px;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffca2c !important;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: #ffca2c;
+    bottom: 0;
+    left: 10%;
+    border-radius: 2px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffca2c !important;
+}
+
+/* ============================================================
+   MATCH CARDS
+   ============================================================ */
+.match-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.match-card:hover {
+    transform: translateY(-8px);
+}
+
+.match-header-top {
+    background-color: #1a1932;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.team {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.team img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.team span {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.vs-icon {
+    font-size: 24px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.match-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.match-date {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.match-league,
+.match-stadium {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.match-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0033ab;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Старі класи (сумісність) */
+.match-header {
+    background: #8d6e6e;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match-body {
+    padding: 15px;
+}
+
+.match-body h3 {
+    font-size: 18px;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn-tickets {
+    background-color: #ffca2c;
+    border: none;
+    border-radius: 10px;
+    color: #1a1932;
+    font-weight: 800;
+    padding: 12px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.btn-tickets:hover {
+    background-color: #eab600;
+    color: #000;
+}
+
+.btn-send-contact {
+    background-color: #1a1932;
+    color: white;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-send-contact:hover {
+    background-color: #ffca2c;
+    color: #1a1932;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================================
+   NEWS
+   ============================================================ */
+.news-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.news-img-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-img-container img {
+    transform: scale(1.1);
+}
+
+.news-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #0d6efd;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.news-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-date {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.news-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    color: #1a1932;
+}
+
+.news-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.news-more {
+    font-weight: 700;
+    color: #0d6efd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.news-more:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info-side {
+    background: linear-gradient(135deg, #1a1932 0%, #2a2852 100%);
+    position: relative;
+}
+
+.contact-details p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.custom-input {
+    border: 2px solid #f0f0f0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #1a1932;
+    box-shadow: none;
+    background-color: #f8f9fa;
+}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+#myBookingsList {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.modal-content {
+    border-radius: 20px;
+    border: none;
+}
+
+.modal-header {
+    background-color: #1a1932;
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+.custom-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+    background-color: white !important;
+    opacity: 1 !important;
+    border-radius: 50%;
+    padding: 12px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.hero-about {
+    min-height: 550px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    background: linear-gradient(rgba(26, 25, 50, 0.85), rgba(26, 25, 50, 0.85)), url("img/stadium.jpg") no-repeat center !important;
+    background-size: cover !important;
+}
+
+.hero-about::before {
+    display: none !important;
+}
+
+.about-history-section {
+    background-color: #ebebeb;
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.about-history-section h3 {
+    color: #1a1932;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-history-section p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.team-title {
+    margin: 60px 0 40px;
+    font-weight: 900;
+    color: #1a1932;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.team-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: #ffca2c;
+    bottom: -10px;
+    left: 0;
+}
+
+/* ============================================================
+   PLAYERS
+   ============================================================ */
+.player-card {
+    background: #e0e0e0;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    background: #d4d4d4;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.player-photo-placeholder {
+    background: #c0c0c0;
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #777;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border: 2px dashed #b0b0b0;
+}
+
+.player-photo-container {
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #c0c0c0;
+    margin-bottom: 15px;
+}
+
+.player-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover .player-img {
+    transform: scale(1.05);
+}
+
+.player-info h6 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1a1932;
+    margin-bottom: 5px;
+}
+
+.player-info p {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.team-nav-btn {
+    background: #1a1932;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.team-nav-btn:hover {
+    opacity: 1;
+    background: #ffca2c;
+    color: #1a1932;
+}
+
+.swiper {
+    width: 100%;
+    padding: 10px 0 30px 0 !important;
+}
+
+/* ============================================================
+   STATISTICS PAGE
+   ============================================================ */
+.stat-badge {
+    background: linear-gradient(135deg, #1a1932 0%, #2a2852 100%);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #ffca2c;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 202, 44, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.stat-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 202, 44, 0.2);
+    border-color: #ffca2c;
+}
+
+.hero-stats-bg {
+    background: linear-gradient(45deg, #1a1932, #0d6efd) !important;
+    border-left: 10px solid #ffca2c;
+}
+
+.table-container {
+    border: 2px solid #1a1932;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.custom-stats-table {
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.custom-stats-table thead {
+    background-color: #1a1932;
+    color: #ffca2c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.custom-stats-table th {
+    border: none !important;
+    padding: 18px !important;
+    text-align: center;
+}
+
+.custom-stats-table td {
+    padding: 15px !important;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    background: #fff;
+}
+
+.custom-stats-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.match-win  { color: #28a745; font-weight: 800; }
+.match-draw { color: #f1b400; font-weight: 800; }
+.match-loss { color: #dc3545; font-weight: 800; }
+
+/* ============================================================
+   ACHIEVEMENTS PAGE
+   ============================================================ */
+.achievements-section {
+    background-color: #ebebeb;
+    border-radius: 20px;
+}
+
+.alternate-bg {
+    background-color: #f5f5f5;
+}
+
+.category-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1932;
+}
+
+.trophy-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.trophy-item {
+    text-align: center;
+    width: 100px;
+}
+
+.trophy-img-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #ffca2c;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.trophy-item:hover .trophy-img-placeholder {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.trophy-item p {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.award-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #ffca2c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.award-icon {
+    font-size: 1.2rem;
+    color: #1a1932;
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+}
+
+/* ============================================================
+   RESPONSIVE — ВЕЛИКІ ПРИСТРОЇ ≥ 1200px
+   ============================================================ */
+@media (min-width: 1200px) {
+
+    /* Hero — більший відступ і шрифт */
+    .hero-box {
+        min-height: 780px;
+        padding: 60px;
+    }
+
+    .hero-text {
+        font-size: 26px;
+    }
+
+    /* Картки матчів — вирівнюємо висоту рядка */
+    .match-header-top {
+        padding: 30px 20px;
+    }
+
+    .team img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .match-date {
+        font-size: 1.2rem;
+    }
+
+    /* Новини — фото трохи вищі */
+    .news-img-container {
+        height: 220px;
+    }
+
+    /* Контакти — ширший контейнер */
+    .contact-wrapper {
+        max-width: 1100px;
+    }
+
+    /* Статистика — ширші комірки таблиці */
+    .custom-stats-table th,
+    .custom-stats-table td {
+        padding: 20px 24px !important;
+    }
+
+    .stat-badge {
+        font-size: 1rem;
+        padding: 16px 32px;
+    }
+
+    /* Гравці: 4 слайди видно без перекриття */
+    .player-info h6 {
+        font-size: 1.15rem;
+    }
+
+    /* Achievements */
+    .about-history-section {
+        padding: 60px;
+    }
+
+    .trophy-item {
+        width: 120px;
+    }
+
+    .trophy-img-placeholder {
+        width: 96px;
+        height: 96px;
+        font-size: 2.4rem;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — СЕРЕДНІ ПРИСТРОЇ ≥ 992px (до 1199px)
+   ============================================================ */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /* Hero — компактніший */
+    .hero-box {
+        min-height: 680px;
+        padding: 36px;
+    }
+
+    .hero-text {
+        font-size: 20px;
+    }
+
+    /* Матчі: 3 колонки — зменшуємо padding всередині картки */
+    .match-header-top {
+        padding: 18px 10px;
+    }
+
+    .team img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .team span {
+        font-size: 12px;
+    }
+
+    .match-date {
+        font-size: 1rem;
+    }
+
+    .match-league,
+    .match-stadium {
+        font-size: 13px;
+    }
+
+    /* Новини */
+    .news-img-container {
+        height: 180px;
+    }
+
+    .news-title {
+        font-size: 16px;
+    }
+
+    /* Контакти */
+    .contact-wrapper {
+        max-width: 960px;
+    }
+
+    /* Статистика */
+    .custom-stats-table th,
+    .custom-stats-table td {
+        padding: 14px 16px !important;
+    }
+
+    .stat-badge {
+        font-size: 0.85rem;
+        padding: 12px 22px;
+    }
+
+    /* About history */
+    .about-history-section {
+        padding: 36px;
+    }
+
+    /* Hero about — трохи нижче */
+    .hero-about {
+        min-height: 460px !important;
+    }
+
+    /* hero-stats */
+    .hero-stats-bg {
+        border-left-width: 8px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — МЕНШЕ 992px (мобільні / планшети)
+   Залишаємо Bootstrap робити своє, фіксуємо тільки власні класи
+   ============================================================ */
+@media (max-width: 991px) {
+
+    /* Hero */
+    .hero-box {
+        min-height: 420px;
+        padding: 28px;
+        border-radius: 8px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    /* Hero about */
+    .hero-about {
+        min-height: 320px !important;
+        padding: 32px !important;
+    }
+
+    /* Картки матчів — одна в рядок (Bootstrap col-md-6 дасть 2) */
+    .match-header-top {
+        padding: 16px 10px;
+    }
+
+    .team img {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Контакти — ліва панель зверху */
+    .contact-info-side {
+        padding: 36px 24px !important;
+    }
+
+    /* About */
+    .about-history-section {
+        padding: 28px 20px;
+    }
+
+    /* Stat badges — переносяться на новий рядок автоматично (flex-wrap) */
+    .stat-badge {
+        font-size: 0.8rem;
+        padding: 10px 18px;
+    }
+
+    /* Table — горизонтальний скрол вже є через .table-responsive */
+    .custom-stats-table th,
+    .custom-stats-table td {
+        padding: 12px 10px !important;
+        font-size: 14px;
+    }
+
+    /* Footer прив'язаний до низу через Bootstrap min-vh-100 + mt-auto */
+}
+
+/* ============================================================
+   RESPONSIVE — МЕНШЕ 576px
+   ============================================================ */
+@media (max-width: 575px) {
+
+    .hero-box {
+        min-height: 300px;
+        padding: 20px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .match-date {
+        font-size: 0.9rem;
+    }
+
+    .news-title {
+        font-size: 15px;
+    }
+
+    .about-history-section {
+        padding: 20px 16px;
+    }
+
+    .stat-badge {
+        width: 100%;
+        text-align: center;
+    }
+
+    .trophy-item {
+        width: 80px;
+    }
+
+    .trophy-img-placeholder {
+        width: 64px;
+        height: 64px;
+        font-size: 1.6rem;
+    }
+}

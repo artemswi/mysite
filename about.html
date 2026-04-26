@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас | ФК Київ</title>
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/favicon.png" alt="Логотип" class="nav-logo">
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">Про нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="achievements.html">Досягнення</a></li>
+                <li class="nav-item"><a class="nav-link" href="stats.html">Статистика</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="container my-4">
+    <div class="hero-box hero-about p-5 text-white">
+        <h1 class="display-4 fw-bold">ПРО ФК КИЇВ</h1>
+        <p class="hero-text">
+            <strong>Лозунг:</strong> Сила в єдності, перемога в серці. <br>
+            <strong>Мета:</strong> Ми створюємо нову еру українського футболу, виховуючи лідерів на полі та за його межами. Наша мета — гідно представляти столицю на європейській арені та дарувати вболівальникам гру, якою можна пишатися.
+        </p>
+    </div>
+</header>
+
+<section class="container my-5">
+    <div class="about-history-section">
+        <h3 class="fw-bold mb-3">Історія клубу</h3>
+        <p class="text-muted mb-0">
+            ФК «Київ» був заснований у 2020 році як втілення мрії про сучасний клуб, що поєднує інноваційний підхід до тренувань та глибоку повагу до футбольних традицій столиці. Почавши шлях з міських змагань, ми за рекордно короткий термін пройшли шлях до Вищої ліги, завдяки ставці на молодих українських виконавців та власній академії. <br><br>
+            Сьогодні наш клуб — це не лише основна команда, а й масштабна інфраструктура, що включає сучасну тренувальну базу та одну з найкращих дитячо-юнацьких шкіл країни. Ми пишаємося тим, що кожен наш матч на «Олімпійському» стає справжнім святом для тисяч вболівальників, які стали нашою великою футбольною родиною.
+        </p>
+    </div>
+</section>
+
+<section class="container mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold m-0">Склад команди</h2>
+        <div class="d-flex gap-2">
+            <div class="team-nav-btn swiper-button-prev-custom">❮</div>
+            <div class="team-nav-btn swiper-button-next-custom">❯</div>
+        </div>
+    </div>
+
+    <div class="swiper teamSlider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="player-card">
+                    <div class="player-photo-container">
+                        <img src="img/player1.jpg" alt="Олександр Коваленко" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h6>Коваленко Олександр</h6>
+                        <p>Воротар</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="player-card">
+                    <div class="player-photo-container">
+                        <img src="img/player2.jpg" alt="Максим Бондар" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h6>Бондар Максим</h6>
+                        <p>Захисник</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="player-card">
+                    <div class="player-photo-container">
+                        <img src="img/player3.jpg" alt="Артем Сидоренко" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h6>Сидоренко Артем</h6>
+                        <p>Півзахисник</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="player-card">
+                    <div class="player-photo-container">
+                        <img src="img/player4.jpg" alt="Іван Кравченко" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h6>Кравченко Іван</h6>
+                        <p>Нападник</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="player-card">
+                    <div class="player-photo-container">
+                        <img src="img/player5.jpg" alt="Сергійченко Дмитро" class="player-img">
+                    </div>
+                    <div class="player-info">
+                        <h6>Сергійченко Дмитро</h6>
+                        <p>Півзахисник</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center p-3 mt-auto">
+    © 2026 ФК Київ | Всі права захищені
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.teamSlider', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+        breakpoints: {
+            576: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 }
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next-custom',
+            prevEl: '.swiper-button-prev-custom',
+        },
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+</body>
+</html>
